@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faHeart, faMobileAndroidAlt } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'lv-header',
@@ -7,6 +7,5 @@ import { faHeart, faMobileAndroidAlt } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  faMobileAndroidAlt = faMobileAndroidAlt;
-  faHeart = faHeart;
+  faBars = faBars;
 }
