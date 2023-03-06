@@ -8,9 +8,16 @@
           <img src="assets/logo.png" class="w-32" alt="" />
         </a>
       </div>
-      <input type="checkbox" id="active" />
+      <input type="checkbox" id="active" #active (click)="($event)" />
       <label for="active" class="menu-btn">
-        <fa-icon [icon]="faBars"></fa-icon>
+        <fa-icon
+          [icon]="faBars"
+          [ngClass]="{ hidden: active.checked }"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faXmark"
+          [ngClass]="{ hidden: !active.checked }"
+        ></fa-icon>
       </label>
       <div class="wrapper">
         <ul>

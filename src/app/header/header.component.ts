@@ -8,4 +8,5 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 })
 export class HeaderComponent {
   faBars = faBars;
+  faXmark = faXmark;
 }
