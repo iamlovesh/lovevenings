@@ -11,6 +11,10 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ServicesComponent } from './services/services.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { HttpClientModule } from '@angular/common/http';
+import { AppService } from './app.service';
 
 @NgModule({
   declarations: [
@@ -21,14 +25,17 @@ import { ServicesComponent } from './services/services.component';
     AboutComponent,
     ContactComponent,
     ReviewsComponent,
-    ServicesComponent
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule,
+    GoogleMapsModule,
+    HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AppService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

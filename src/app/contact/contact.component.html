@@ -1,9 +1,104 @@
-<p>contact works!</p>
-<p>contact works!</p>
-<p>contact works!</p>
-<p>contact works!</p>
-<p>contact works!</p>
-<p>contact works!</p>
-<p>contact works!</p>
-<p>contact works!</p>
-<p>contact works!</p>
+<section class="min-h-screen bg-fixed bg-[url('assets/bg.jpg')] py-4">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <div class="w-full grid place-content-center">
+      <form
+        [formGroup]="contact"
+        (ngSubmit)="onSubmit()"
+        class="backdrop-blur-lg bg-white/50 shadow-md rounded p-8"
+      >
+        <h1 class="md:text-xl lg:text-2xl text-center mb-6">Contact with us</h1>
+        <div class="flex items-center border-b border-gray-500 py-2 mb-4">
+          <input
+            class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+            type="text"
+            placeholder="Name"
+            formControlName="name"
+            required
+          />
+        </div>
+        <div class="flex items-center border-b border-gray-500 py-2 mb-4">
+          <input
+            class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+            formControlName="mobile"
+            type="tel"
+            placeholder="Mobile"
+            required
+          />
+        </div>
+        <div class="flex items-center border-b border-gray-500 py-2 mb-4">
+          <input
+            class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+            formControlName="email"
+            type="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div
+          class="flex items-center border-b border-gray-500 py-2 relative w-64 mb-4"
+        >
+          <select
+            class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+            formControlName="occasion"
+            required
+          >
+            <option value="">Select Occasion</option>
+            <option value="Birthday">Birthday</option>
+            <option value="Anniversary">Anniversary</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Inauguration">Inauguration</option>
+            <option value="Others">Others</option>
+          </select>
+          <div
+            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+          >
+            <svg
+              class="fill-current h-4 w-4"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="flex items-center border-b border-gray-500 py-2 mb-4">
+          <input
+            class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+            formControlName="address"
+            type="text"
+            placeholder="Address"
+            required
+          />
+        </div>
+        <div class="flex items-center justify-between">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+            [disabled]="!contact.valid"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="w-full grid place-content-center">
+      <div class="backdrop-blur-lg bg-white/50 shadow-md rounded p-8">
+        <h1 class="md:text-xl lg:text-2xl text-center mb-6">Location</h1>
+        <address>
+          <p>
+            23, Abc, 123 Street, near Abc, <br />
+            Anywhere, Anywhere, <br />
+            India-123345
+          </p>
+          <a href="mailto:contact@html.com" class="text-blue-800">
+            contact@html.com
+          </a>
+          <br />
+          <a href="call:+91-1234567890">+91-1234567890</a>
+        </address>
+      </div>
+    </div>
+  </div>
+</section>
