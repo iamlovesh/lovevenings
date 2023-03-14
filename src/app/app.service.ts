@@ -10,6 +10,6 @@ export class AppService {
     return this.http.post('/api', data);
   }
   getData() {
-    return this.http.get('/api/read.py');
+    return this.http.get('/api/read');
   }
 }

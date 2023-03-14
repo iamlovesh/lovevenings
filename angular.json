@@ -53,8 +53,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "lovevenings:build:production",
-              "proxyConfig": "src/proxy.conf.json"
+              "browserTarget": "lovevenings:build:production"
             },
             "development": {
               "browserTarget": "lovevenings:build:development",
